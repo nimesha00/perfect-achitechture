@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "_common";
+@import "_variable";
+
+@layer base {
+  :root {
+    --font-geist-sans: "GeistSans", sans-serif;
+    --font-geist-mono: "GeistMono", monospace;
+    --font-glorify: "Glorify", sans-serif;
+    --font-clashGrotesk : "clashGrotesk,, sans-serif"
+    
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 225 6% 14%;
+    --primary-foreground: 210 40% 98%;
+
+    --primary-gold: 39, 66%, 62%;
+    --primary-gold-foreground: 39, 66%, 62%;
+
+    --primary-pink: 17, 40%, 84%, 1;
+    --primary-pink-foreground: 17, 40%, 84%, 1;
+
+    --primary-mint-green: 147, 23%, 64%, 1;
+    --primary-mint-green-foreground: 147, 23%, 64%, 1;
+
+    --primary-success: 122, 39%, 49%;
+
+    --primary-success-background: 132, 24%, 96%;
+
+    --primary-error-button: 356, 78%, 60%;
+
+    --primary-error-button-background: 355, 73%, 97%;
+
+    --primary-yellow: 43, 100%, 50%;
+
+    --primary-yellow-background: 43, 100%, 95%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --crimson-red: 346, 81%, 48%;
+    --crimson-red-foreground: 222.2 47.4% 11.2%;
+
+    --secondary-gray: 0, 0%, 73%;
+    --secondary-gray-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --brand: 53, 18%, 81%;
+    --brand-foreground: 0, 0%, 0%;
+
+    --best-deals: 67, 64%, 95%;
+    --best-deals-foreground: 0, 0%, 0%;
+
+    --error: 0, 100%, 50%;
+    --error-foreground: 0, 0%, 0%;
+
+    --featured-gray: 0, 0%, 96%, 1;
+    --featured-gray-foreground: 0, 0%, 96%, 1;
+
+    --text-gray: 0, 0%, 48%, 1;
+    --text-gray-foreground: 0, 0%, 48%, 1;
+
+    --line-gray: 0, 0%, 96%;
+    --line-gray-foreground: 0, 0%, 0%;
+
+    --light-blue: 195, 100%, 94%;
+    --light-blue-foreground: 0, 0%, 0%;
+
+    --light-purple: 263, 100%, 94%;
+    --light-purple-foreground: 0, 0%, 0%;
+
+    --light-orange: 43, 100%, 94%;
+    --light-orange-foreground: 0, 0%, 0%;
+
+    --light-yellow: 66, 100%, 94%;
+    --light-yellow-foreground: 0, 0%, 0%;
+
+    --primary-dark-opacity-gray: 220, 3%, 18%;
+    --primary-dark-opacity-gray-foreground: 0, 0%, 0%;
+
+    --background-gray: 228, 33%, 97%;
+    --background-gray-foreground: 0, 0%, 0%;
+
+    --item-gray: 214, 13%, 58%;
+    --item-gray-foreground: 0, 0%, 100%;
+
+    --item-red: 342, 64%, 24%;
+    --item-red-foreground: 0, 0%, 100%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply font-sans;
+    h1,
+    h2,
+    h3,
+    h4 {
+     //  font-family: "Glorify", "Poppins", sans-serif;
+    //  @apply font-clashGrotesk;
+      white-space: normal;
+    }
+    p,
+    span,
+    div,
+    label,
+    button,
+    a,
+    ul,
+    li {
+     // font-family: "Glorify", "Poppins", sans-serif;
+      //@apply font-clashGrotesk
+    }
+  }
+}
+
+/* center the slides inside react-slick */
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}

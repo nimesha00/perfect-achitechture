@@ -1,0 +1,267 @@
+@import "_variable";
+
+.custom-scroll {
+  /* Style the scrollbar thumb for .custom-scroll */
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Set your desired thumb color */
+  }
+
+  /* Style the scrollbar track for .custom-scroll */
+  &::-webkit-scrollbar-track {
+    background-color: transparent; /* Set your desired track color */
+  }
+
+  /* Set the width of the scrollbar */
+  &::-webkit-scrollbar {
+    width: 5px; /* Set your desired width */
+  }
+
+  /* Hide the scrollbar buttons (arrows) */
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+  &:hover {
+    /* Style the scrollbar thumb for .custom-scroll when hovered */
+    &::-webkit-scrollbar-thumb {
+      background-color: #464646; /* Set hover thumb color */
+    }
+
+    /* Style the scrollbar track for .custom-scroll when hovered */
+    &::-webkit-scrollbar-track {
+      background-color: #0f0f0f; /* Set hover track color */
+    }
+  }
+}
+
+.line {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.line::before,
+.line::after {
+  display: inline-block;
+  content: "";
+  height: 1px;
+  background: $primary-border;
+  width: calc(40% - 1rem);
+  margin: 0 1rem;
+  transform: translateY(50%);
+}
+
+.icon-white svg {
+  color: white;
+}
+
+.icon-primary svg {
+  color: $primary-dark;
+}
+
+.bg-forgot {
+  background-image: url("/assets/images/auth/forgotBackround.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-admin {
+  background-image: url("/assets/images/admin/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-uploader-file-name-wrapper {
+  width: calc(100% + 4px);
+}
+
+/*Stepper */
+.step-item {
+  @apply relative flex flex-col justify-center items-center w-36;
+}
+
+.step-item:not(:first-child)::before {
+  @apply content-[''] bg-slate-700 absolute w-full h-[3px] right-2/4 top-1/3 -translate-y-2/4;
+}
+
+.step {
+  @apply w-10 h-10 flex z-10 relative bg-primary rounded-full items-center font-semibold text-white justify-center;
+}
+
+.active .step {
+  @apply bg-primaryGold;
+}
+
+.complete .step {
+  @apply bg-primaryPink;
+}
+
+.complete p {
+  @apply text-primary;
+}
+
+.aspect-ratio-promotion-slider {
+  aspect-ratio: 10 / 10;
+  width: 100%;
+  height: auto;
+}
+
+/*Promotion Carousel Size */
+
+.promotion-grid-reverse {
+  direction: rtl;
+}
+
+.carousel__slide-item-img-link {
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    width: 100%;
+  }
+
+  &::after {
+    align-items: center;
+    background: rgba(black, 0.5);
+    color: white;
+    content: "visit shop";
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    opacity: 0;
+    position: absolute;
+    transition: all 0.5s ease;
+    width: 100%;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+
+    img {
+      transform: scale(1.3);
+    }
+  }
+}
+
+.carousel__slide-item-img-link-with-opacity {
+  cursor: pointer;
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  opacity: 1;
+  background: rgba(black, 0.5);
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+    width: 100%;
+  }
+
+  &::after {
+    align-items: center;
+    color: white;
+    content: "View All";
+    display: flex;
+    background: rgba(black, 0.5);
+    height: 100%;
+    justify-content: center;
+    opacity: 1;
+    position: absolute;
+    transition: all 0.5s ease;
+    width: 100%;
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.3);
+    }
+  }
+}
+
+/* Directory Custom CSS */
+.submenu {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-out;
+}
+
+.submenu-open {
+  max-height: 400px; /* Adjust height based on content */
+}
+
+.rotate-icon {
+  transition: transform 0.3s ease-out;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.menu-item {
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+}
+
+.submenu-item {
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.submenu-item-enter {
+  animation: slideIn 0.2s ease-out;
+}
+
+.submenu-item-exit {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.submenu-item-exit-active {
+  opacity: 0;
+  transform: translateY(-5px);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.resizableIFrame {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.resizableIFrame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
