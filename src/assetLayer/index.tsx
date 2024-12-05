@@ -1,6 +1,6 @@
 /*-------------------------------------------------------Logos----------------------------------------------------------------*/
-import MayaLuminaLogo from "../../public/assets/logos/logo.png";
-import MayaDarkLogo from "../../public/assets/logos/logo-dark.png";
+import MayaLuminaLogo from "../../public/assets/logos/Logo1.png";
+import MayaDarkLogo from "../../public/assets/logos/Logo2.png";
 
 /*-------------------------------------------------------About Us----------------------------------------------------------------*/
 import Surgeon from "../../public/assets/aboutUs/surgeon.png";
